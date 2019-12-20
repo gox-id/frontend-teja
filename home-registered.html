@@ -66,6 +66,8 @@
                     <span class="glitch__color glitch__color--green"><img src="http://safeplace.gox.id/assets/logo-blue-beta-v1-054e6236c9596d0ac4cb812196c9f75abee744fe78e6945ac8177e14612cf270.png" /></span>
                     <span class="glitch__main"><img src="http://safeplace.gox.id/assets/logo-beta-v1-1d8a5225f2f47808bb95d112fbf56dcd3de96f8d1c0a426b51e8392d205fb29b.png" /></span>
                 </a>
+                
+                <div class="right_menu_gox">
                 <ul class="ml-auto d-lg-none mobile_dropdown">
                     <li style="width:98%;" class="mobile_hide_menu">
                             <form id="index_search" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
@@ -120,6 +122,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav main-menu mr-auto align-items-center">
                         <li class="nav-item ">
@@ -1119,6 +1122,20 @@
 
     <div id="sb_widget"></div>
     <div id="forModal"></div>
+
+<script>
+$(function() {
+  $("#index_search").on("click", function(e) {
+    $("#index_search").addClass("active");
+    e.stopPropagation()
+  });
+  $(document).on("click", function(e) {
+    if ($(e.target).is("#index_search") === false) {
+      $("#index_search").removeClass("active");
+    }
+  });
+});
+</script>
 
     <script type="text/javascript">
         if (self == top) {

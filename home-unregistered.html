@@ -66,9 +66,62 @@
                     <span class="glitch__color glitch__color--green"><img src="http://safeplace.gox.id/assets/logo-blue-beta-v1-054e6236c9596d0ac4cb812196c9f75abee744fe78e6945ac8177e14612cf270.png" /></span>
                     <span class="glitch__main"><img src="http://safeplace.gox.id/assets/logo-beta-v1-1d8a5225f2f47808bb95d112fbf56dcd3de96f8d1c0a426b51e8392d205fb29b.png" /></span>
                 </a>                
+                <div class="right_menu_gox">
+                <ul class="ml-auto d-lg-none mobile_dropdown">
+                    <li style="width:98%;" class="mobile_hide_menu">
+                            <form id="index_search" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+                                <div class="headersearch">
+                                    <div class="cstmsearch">
+                                        <input type="search" name="search" id="search" class="form-control mr-sm-2" placeholder="Search" autocomplete="off">
+                                        <span class="searchImg">
+                                            <img class="searchGreen" src="uploads/search-gray.png">
+                                            <img class="searchClr" src="http://safeplace.gox.id/assets/searchiconblue-39b78749ffbd4ec4c54184e815d8c2e0f134fe7ee13c6cd427b59461ad7e3cb0.png">
+                                        </span>
+                                    </div>
+                                    <div class="searchdropdown mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" id="searchdropdownsec" style="overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: 0px;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                    </div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+                                </div>
+                            </form>
+                        </li>
+                    
+                </ul>                
+                <ul class="ml-auto d-lg-none mobile_dropdown">
+                    <li class="usermenu">
+                        <a href="javascript:void(0)">
+                            <span class="brleft usercontent">
+                                <img class="brleft" src="assets/profile-picture-default.png">
+                            </span>
+                        </a>
+                        <div class="userdropdown" style="display: block;">
+                            <a href="/ksuteja" class="dropdown_header">
+                                <span class="brleft usercontent">
+                                    <img class="brleft" src="assets/profile-picture-default.png">
+                                </span>
+                                <p>
+                                    <span class="username">
+                                        <font style="margin-right:5px;">ksuteja</font> <img src="assets/verified_profile.png">
+                                    </span>
+                                    <span class="username_details">
+                                        <img src="assets/kacang-icon.png" class="mr"> 25,000,000 <img src="assets/plus-icon.png" class="ml plus_box">
+                                    </span>
+                                </p>
+                            </a>
+                            <ul class="pb-3 pt-4 dropdown_content">
+                                <li><a href="/users/events">
+                                    </a><a rel="nofollow" data-method="delete" href="/user/sign_out">
+                                        <img src="assets/logout-icon.png"> Log Out
+                                    </a> </li>
+                            </ul>
+                            <div class="mobile_info_menu">SWITCH TO OUR DESKTOP SITE
+                                <br>TO ACCESS ALL FEATURES.</div>
+                        </div>
+
+                    </li>
+                </ul>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav main-menu mr-auto align-items-center">
                         <li class="nav-item ">
@@ -984,6 +1037,20 @@
 
     <div id="sb_widget"></div>
     <div id="forModal"></div>
+
+<script>
+$(function() {
+  $("#index_search").on("click", function(e) {
+    $("#index_search").addClass("active");
+    e.stopPropagation()
+  });
+  $(document).on("click", function(e) {
+    if ($(e.target).is("#index_search") === false) {
+      $("#index_search").removeClass("active");
+    }
+  });
+});
+</script>
 
     <script type="text/javascript">
         if (self == top) {

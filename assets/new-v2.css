@@ -257,6 +257,14 @@ body{
 HEADER
 ------------------------------------- */
 
+.cstmsearch .form-control:focus{
+	background: #252525 !important;	
+}
+
+header.navsec{
+	background: #000;
+}
+
 header.navsec,
 .navsec.sticky{
     padding: 5px 0 5px 0;
@@ -276,7 +284,8 @@ header.navsec,
   color: #898989 !important;
 }
 .cstmsearch{
-    background: #0e050d;
+    /* background: #0e050d; */
+    background: #000;
 }
 
 .cstmsearch input{
@@ -1071,6 +1080,11 @@ MENU
     transition:none;	
 }
 
+li.usermenu a .usercontent img{
+	width: auto;
+	height: 36px;
+}
+
 /* -----------------------------------
 PROFILE MENU
 ------------------------------------- */
@@ -1329,93 +1343,571 @@ NOTIFICATIONS MENU
 ------------------------------- RESPONSIVE -- REGISTERED
 ------------------------------------- */
 
+@media (max-width: 990px){
 
-.mobile_dropdown *{
-    transition:none !important;
-}
-
-.mobile_dropdown .dropdown_header{
-    display: block;
-}
-
-.mobile_dropdown .dropdown_header p{
-    display: inline-block;
-    margin: 0px;
-    vertical-align: bottom;
-    margin-left: 20px;
-}
-
-.mobile_dropdown .dropdown_header p .username font{
-    font-family: Rubik;
-    font-size: 25px;
-    line-height: 0.76;
-    letter-spacing: 0.5px;
-    color: #c1c1c1;
-    font-weight: 300;    
-}
-
-.mobile_dropdown .dropdown_header p .username img{
-    position: relative;
-    top:-3px;
-}
-
-.mobile_dropdown .dropdown_header p span.username_details{
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.56px;
-    color: #ffffff;
-}
-
-.mobile_dropdown .usermenu{
-    position: static;
-}
-
-.mobile_dropdown .usermenu .userdropdown{
-    left: -15px;
-    position: absolute;
-    width: 200%;
-    margin-top: 0px;    
-}
-
-.mobile_dropdown .dropdown_header p span.username_details img.mr{
-    margin-right: 5px;
-}
-
-.mobile_dropdown .dropdown_header p span.username_details img.ml{
-    margin-left: 5px;
-}
-
-.mobile_dropdown ul li a{
-    font-family: Rubik;
-    font-size: 16px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: 4.16px;
-    text-align: left;
-    color: #ffffff;
-    text-transform: uppercase;    
-}
-
-.mobile_info_menu{
-    font-family: Rubik;
-    font-size: 11px;
-    letter-spacing: 3.3px;
-    color: #606579;
-    padding: 40px;    
-}
-
-.mobile_dropdown{
-    margin-left: 20px !important;
+	.mobile_dropdown *{
+	    transition:none !important;
+	}
+	
+	.mobile_dropdown .dropdown_header{
+	    display: block;
+	}
+	
+	.mobile_dropdown .dropdown_header p{
+	    display: inline-block;
+	    margin: 0px;
+	    vertical-align: bottom;
+	    margin-left: 20px;
+	}
+	
+	.mobile_dropdown .dropdown_header p .username font{
+	    font-family: Rubik;
+	    font-size: 25px;
+	    line-height: 0.76;
+	    letter-spacing: 0.5px;
+	    color: #c1c1c1;
+	    font-weight: 300;    
+	}
+	
+	.mobile_dropdown .dropdown_header p .username img{
+	    position: relative;
+	    top:-3px;
+	}
+	
+	.mobile_dropdown .dropdown_header p span.username_details{
+	    display: block;
+	    margin-top: 10px;
+	    font-size: 14px;
+	    font-weight: 500;
+	    letter-spacing: 0.56px;
+	    color: #ffffff;
+	}
+	
+	.mobile_dropdown .usermenu{
+	    position: static;
+	}
+	
+	.mobile_dropdown .usermenu .userdropdown{
+	    left: -15px;
+	    position: absolute;
+	    width: 200%;
+	    margin-top: 0px;    
+	}
+	
+	.mobile_dropdown .dropdown_header p span.username_details img.mr{
+	    margin-right: 5px;
+	}
+	
+	.mobile_dropdown .dropdown_header p span.username_details img.ml{
+	    margin-left: 5px;
+	}
+	
+	.mobile_dropdown ul li a{
+	    font-family: Rubik;
+	    font-size: 16px;
+	    font-weight: normal;
+	    font-stretch: normal;
+	    font-style: normal;
+	    letter-spacing: 4.16px;
+	    text-align: left;
+	    color: #ffffff;
+	    text-transform: uppercase;    
+	}
+	
+	.mobile_info_menu{
+	    font-family: Rubik;
+	    font-size: 11px;
+	    letter-spacing: 3.3px;
+	    color: #606579;
+	    padding: 40px;    
+	}
+	
+	.mobile_dropdown{
+	    /* margin-left: 20px !important; */
+	    display: inline-block;
+	    margin-left: 0px !important;	    
+	}
+	
+	.right_menu_gox{
+		float: right;
+	}
+	
+	
+	
 }
 
 /* -----------------------------------
 ------------------------------- RESPONSIVE -- REGISTERED -- SEARCH
 ------------------------------------- */
+@media (max-width: 990px){
 
-.mobile_dropdown .headersearch input{
-    width: 0px;
-    background: transparent;
+	.mobile_dropdown .headersearch input{
+	    width: 0px;
+	    background: transparent;
+	    border: 0px;
+	}
+	
+	#index_search.active{
+	    width: 100%;
+	    width: calc(100% - 95px);
+	    position: absolute;
+	    left: 0px;
+	    height: 100%;
+	    top: 0px;
+	    background: #000;	
+	}
+	
+	#index_search.active .headersearch #search{
+		width: 100%;
+	    background: #252525 !important;	
+	}
+	
+	#index_search.active .headersearch .cstmsearch{
+		margin-top: 10px;
+	}
+}
+
+
+/* --------------- */
+/* PARTIAL SUBMISSION #3 -- STREAMERS REG */
+/* --------------- */
+
+section .stream-registration{
+	padding: 80px 0px 140px;
+}
+
+
+section .stream-registration h1{
+    font-family: 'Lackonic-Regular';
+	font-size: 56px;
+	font-weight: normal;
+	letter-spacing: 1.3px;
+	color: #db3634;	
+	margin-bottom: 48px;
+	text-transform: uppercase;
+}
+
+section .stream-registration h3{
+	font-size: 25px;
+	letter-spacing: 0.5px;	
+	color: #FFF;
+	font-weight: normal;
+	margin-bottom: 40px;
+}
+section .stream-registration p{
+	font-size: 16px;
+	line-height: 2.06;
+	letter-spacing: 0.32px;
+	color: #ffffff;
+	font-weight: normal;
+	word-break: break-word;	
+ }
+
+.button.gox_stream{
+	margin-top: 30px;
+    border-radius: 6px;
+    box-shadow: 0 6px 15px 0 #0a4a10;
+    background-color: #76f581;	
+    min-width: 144px;    
+}
+
+.button.gox_stream > a{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.28px;
+    text-align: left;
+    color: #000000;
+    text-shadow: none;	
+    padding: 0px 20px;
+}
+
+/* -----------------------------------
+STREAMERS REG -- TAB
+------------------------------------- */
+
+.sectionSpace.tab_step{
+	padding-top: 80px;
+}
+
+section .tab_step .tab_container{
+	display: flex;
+    justify-content: space-between;		
+}
+
+section .tab_step span.tab_title{
+	font-family: Rubik;
+	font-size: 9px;
+	font-weight: 500;
+	line-height: 1.66;
+	letter-spacing: 0.9px;
+	text-align: center;
+	color: #838684;	
+	text-transform: uppercase;
+	display: block;
+}
+
+section .tab_step .tab_stream{
+	display: inline-block;
+    z-index: 2;
+    background: #141519;
+    padding: 0px 10px;    
+    border-radius: 100%;
+    min-width: 90px;
+}
+
+section .tab_step .tab_container .tab_meter{
+	background: #474E5D;
+    width: 100%;
+    height: 8px;
+    top: 25px;
+    z-index: 1;
+    border-radius: 8px;
+	position: relative;
+}
+
+section .tab_step .tab_container .tab_count{
+    font-family: 'Lackonic-Regular';
+    font-size: 30px;
+    font-style: normal;
+    line-height: 0.7;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;	
+    display: block;
+    width: 56px;
+    height: 56px;
+    margin: auto;
+    display: block;
+    margin-bottom: 14px;    
+    border: solid 5px #76f581;
+    border-radius: 100%;
+    line-height: 43px;
+}
+
+section .tab_step .tab_stream.passed h3{
+    background-image: url(../uploads/checkmark.svg);
+    background-size: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+}
+
+section .tab_step .tab_meter.passed{
+	background: #0E49FB;
+}
+
+section .tab_step .tab_meter.passed.half{
+	background: linear-gradient(90deg, #0E49FB 50%, #474E5D 50%);
+}
+
+/* -----------------------------------
+STREAMERS REG -- STEP 1
+------------------------------------- */
+
+section .stream-registration.step-1 .request_icon{
+	text-align: center;	
+	display: flex;
+    align-items: center;
+    justify-content: center;	
+}
+
+
+
+/* -----------------------------------
+STREAMERS REG -- STEP 2
+------------------------------------- */
+section .stream-registration.step-2 .request_icon_two{
+  display: flex;
+  align-items: center;
+ }
+
+
+
+/* -----------------------------------
+STREAMERS REG -- STEP 3
+------------------------------------- */
+
+.stream-registration.step-3 .terms_condition .overflow_tnc{
+	background: #000;
+    padding: 30px;
+    padding-right: 15px;	
+    border-radius: 8px;
+}
+
+.stream-registration.step-3 .terms_condition h1{
+	text-align: center;
+}
+
+.stream-registration.step-3 .terms_condition p{
+	margin: 0px;
+    overflow-y: scroll;
+    padding-right: 30px; 
+    font-size: 13px;
+    line-height: 1.77;
+    letter-spacing: 0.26px;
+    color: #ffffff;
+    height: 374px;
+    width: 100%;
+    word-break: break-word;
+    border-radius: 9px;
+    background-color: #000000;
+
+}
+
+.stream-registration.step-3 .checkbox_agreement,
+.stream-registration.step-3 .button.gox_stream{
+	display: block;
+	width: 100%;
+}
+
+.stream-registration.step-3 .checkbox_agreement{
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;	
+    margin: 25px 0px 30px;    
+}
+
+.stream-registration.step-3 .checkbox_agreement input{
+	margin-right: 10px;
+}
+
+.stream-registration.step-3 .button.gox_stream{
+	max-width: 144px;
+	margin: auto;
+}
+
+.stream-registration.step-3 .terms_condition p{
+	position: relative;
+}
+
+/* width */
+.stream-registration.step-3 .terms_condition p::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.stream-registration.step-3 .terms_condition p::-webkit-scrollbar-track {
+  background: #2F3230;
+}
+
+/* Handle */
+.stream-registration.step-3 .terms_condition p::-webkit-scrollbar-thumb {
+  background: #CECECE;
+}
+
+/* Handle on hover */
+.stream-registration.step-3 .terms_condition p::-webkit-scrollbar-thumb:hover {
+  background: #CECECE;
+  opacity: 0.8;
+}
+
+/* -----------------------------------
+STREAMERS REG -- STEP 4
+------------------------------------- */
+
+.stream-registration.step-4 h1,
+.stream-registration.step-5 h1{
+    font-family: 'Lackonic-Regular';
+	font-size: 42px;
+	line-height: 1.27;
+	letter-spacing: 3.69px;
+	text-align: center;
+	color: #db3634;	
+}
+
+.stream-registration.step-4 p.desc,
+.stream-registration.step-5 p.desc{
+	font-family: Rubik;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.32px;
+	text-align: center;
+	color: #ffffff;	
+	max-width: 534px;
+	margin: auto;
+	margin-bottom: 40px;
+}
+
+.stream-registration.step-4 #countdown_gox_stream_key{
+    font-family: 'Lackonic-Regular';
+	font-size: 72.9px;
+	line-height: 1.5;
+	letter-spacing: 1.46px;
+	text-align: center;
+	color: #fff;	
+    background: url(../uploads/step-4-gradient-box.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 480px;
+    background-size: 100% 100%;
+    padding: 11px 80px;
+}
+
+.stream-registration.step-4 #countdown_gox_stream_key .hours{
+	color: #0042ff;
+}
+
+.stream-registration.step-4 #countdown_gox_stream_key .minutes{
+	color: #76f581;
+}
+
+.stream-registration.step-4 #countdown_gox_stream_key .seconds{
+	color: #d32d2c;
+}
+
+.stream-registration.step-4 .button.gox_stream,
+.stream-registration.step-5 .button.gox_stream{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    margin: 60px auto 0px;	
+}
+
+.stream_key_gox_container{
+	display: flex;
+}
+
+/* -----------------------------------
+STREAMERS REG -- STEP 5
+------------------------------------- */
+
+.stream-registration.step-5 #stream_key_gox_copy button{
+    font-size: 11px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: 1.65px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.51);
+    background: #40424a;
+    border: 0px;
+    height: 100%;
+    display: inline-block;
+    padding: 13px;
+    float: left;
+    min-width: 110px;
+    width: 20%;	
+}
+
+.stream-registration.step-5 input{
+    font-size: 11px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: 1.65px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.51);
+    background: #0a0b0d;
+    border: 0px;
+    height: 100%;
+    display: inline-block;
+    padding: 13px;
+    width: 80%;	
+}
+
+/* -----------------------------------
+------------------------------- RESPONSIVE -- REGISTRATION PAGE
+------------------------------------- */
+
+@media (max-width: 990px){
+
+	.sectionSpace.stream-registration.step-1 .request_icon{
+		margin: 40px auto;
+		max-width: 70%;
+	}
+	
+	.sectionSpace.stream-registration.step-2 .request_icon_two{
+	    max-width: 70%;
+	    margin: auto;
+	    margin-bottom: 60px;
+	    text-align: center;
+	    display: block;
+	}
+
+}
+
+@media (max-width: 767px){
+	.sectionSpace.tab_step {
+    	padding-top: 40px;
+	}
+
+	.stream-registration.step-1 h1,
+	.stream-registration.step-2 h1,
+	.stream-registration.step-3 h1,
+	.stream-registration.step-4 h1,
+	.stream-registration.step-5 h1{
+		font-size: 40px;
+	}
+
+
+	.stream-registration.step-3 .terms_condition h1,
+	.stream-registration.step-4 h1, .stream-registration.step-5 h1,
+	.stream-registration.step-4 p.desc, .stream-registration.step-5 p.desc{
+		text-align: left;
+	}
+	
+	.stream-registration.step-1 h1{
+		padding-top: 30px;
+	}
+
+	section .stream-registration {
+	    padding: 20px 0px 80px;
+	}
+	
+	section .tab_step .tab_stream{
+		min-width: auto;
+		padding: 0px;
+	}
+	.stream-registration.step-5 #stream_key_gox_copy button,
+	.stream-registration.step-5 input{
+		width: 100%;
+	}
+
+}
+
+
+/* -----------------------------------
+------------------------------- RESPONSIVE -- STEP 5
+------------------------------------- */
+
+@media (max-width: 1200px){
+	.stream_key_gox_container {
+	    display: flex;
+	    width: 100%;
+	    margin: 0px;
+	    max-width: 100% !important;
+	    flex: none;
+	}
+	
+	.stream_key_gox_container .left_gif{
+		margin-right: 40px;
+	}
+	
+	.stream_key_gox_container .right_gif{
+		margin-left: 40px;
+	}
+
+}
+@media (max-width: 767px){
+
+	.stream_key_gox_container .left_gif,
+	.stream_key_gox_container .right_gif{
+		display: none;
+	}
+	.stream-registration.step-4 #countdown_gox_stream_key{
+		max-width: 100%;
+	}
+
 }
